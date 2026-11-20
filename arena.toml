@@ -1,0 +1,10 @@
+[agent]
+name = "ensemble-oracle"
+display_name = "Ensemble Oracle"
+track = "agentic"
+description = "Multi-model OpenRouter ensemble with web research, logit-space aggregation, crowd-prior blending, and calibrated extremizing."
+
+[card]
+models = ["anthropic/claude-opus-5.5", "openai/gpt-6-astra", "google/gemini-3.1-pro-preview", "moonshotai/kimi-k3.1-pro"]
+tools = ["web-search"]
+methodology = "Multiple frontier models sampled several times each via OpenRouter (online variants for live research), trimmed-mean aggregation in logit space, crowd price blended as a prior, mild extremizing, mutually-exclusive normalization, crowd fallback on failure."
